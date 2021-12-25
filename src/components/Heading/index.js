@@ -1,9 +1,9 @@
 import React from 'react'
 import './Heading.css';
 
-function Heading({title}) {
+function Heading({children}) {
     return (
-        <h3>{title}</h3>
+        <h3>{children}</h3>
     )
 }
 
