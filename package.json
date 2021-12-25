@@ -16,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test:pact": "cross-env CI=true react-scripts test --runInBand --setupFiles ./pact/setup.js --setupFilesAfterEnv ./pact/jest-wrapper.js --testMatch \"**/*.pact.spec.js\""
   },
   "eslintConfig": {
     "extends": [
@@ -37,6 +38,9 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/react": "^12.1.2"
+    "@testing-library/react": "^12.1.2",
+    "@pact-foundation/pact": "7.0.1",
+    "@pact-foundation/pact-node": "6.20.0",
+    "cross-env": "^5.2.0"
   }
 }

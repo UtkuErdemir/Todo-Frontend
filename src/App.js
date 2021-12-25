@@ -3,13 +3,15 @@ import './App.css';
 import AppButton from './components/AppButton';
 import AppTextInput from './components/AppTextInput';
 import Heading from './components/Heading';
-import { addTodo } from './utils/addTodo';
+import { TodoService } from './utils/TodoService';
 
 function App() {
   const [todoName, setTodoName] = useState("")
 
+  const todoService = new TodoService();
+
   const addTodoAndResetInput = (todoName) =>{
-    addTodo(todoName).then((response)=>{
+    todoService.addTodo(todoName).then((response)=>{
       const {data:responseData} = response;
       const {success,message} = responseData;
       if(success) setTodoName("");
