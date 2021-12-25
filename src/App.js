@@ -10,7 +10,6 @@ function App() {
 
   const addTodoAndResetInput = (todoName) =>{
     addTodo(todoName).then((response)=>{
-      console.log(response)
       const {data:responseData} = response;
       const {success,message} = responseData;
       if(success) setTodoName("");
