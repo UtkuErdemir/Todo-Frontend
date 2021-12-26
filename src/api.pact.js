@@ -1,5 +1,4 @@
 import {TodoService} from './utils/TodoService'
-//import * as Pact from '@pact-foundation/pact';
 
 describe("API Pact test", () => {
         const todoService = new TodoService(true);
