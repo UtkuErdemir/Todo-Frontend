@@ -1,9 +1,8 @@
-const baseURL = "http://127.0.0.1"
-const port = "5000";
+const baseURL = "https://ue-todo-app-backend.herokuapp.com"
 
 const axios = require('axios');
 const config = {
-    baseURL:`${baseURL}:${port}`,
+    baseURL:`${baseURL}`,
     timeout: 2000,
     headers:{"Content-Type" : "application/x-www-form-urlencoded"}
 };
