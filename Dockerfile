@@ -1,8 +1,8 @@
 FROM node:13.12.0-alpine
 
-WORKDIR /app
+WORKDIR /todo-app-frontend
 
-ENV PATH /app/node_modules/.bin:$PATH
+ENV PATH /todo-app-frontend/node_modules/.bin:$PATH
 
 COPY package.json ./
 COPY package-lock.json ./
