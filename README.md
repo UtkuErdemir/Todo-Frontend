@@ -17,3 +17,9 @@
 # Development Run Command
 
 - npm run start command runs to server.
+
+# Test Server URL
+
+- It is deployed to Heroku. 
+- If you will test it. You have to wait a few seconds for first request.
+- https://ue-todo-app-frontend.herokuapp.com/
