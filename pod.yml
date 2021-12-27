@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: todo-app-frontend
+  labels:
+    name: todo-app-frontend
+spec:
+  containers:
+  - name: todo-app-frontend
+    image: todo-app:frontend
+    resources:
+      limits:
+        memory: "512Mi"
+        cpu: "750m"
+    ports:
+      - containerPort: 3000
