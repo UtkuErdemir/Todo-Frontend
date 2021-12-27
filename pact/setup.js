@@ -11,5 +11,6 @@ global.provider = new Pact({
     pactfileWriteMode: 'update',
     consumer: 'todo-app-consumer',
     provider: 'todo-app-provider',
-    host: '127.0.0.1'
+    host: '127.0.0.1',
+    providerBaseUrl: 'http://localhost:5000',
 });
