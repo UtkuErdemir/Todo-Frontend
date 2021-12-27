@@ -8,4 +8,7 @@ export class TodoService {
         const queryString = new URLSearchParams({todo_name:todoName}).toString();
         return  this.axios.post("/todos",queryString).catch(error=>error.response ? error.response: "");
     }
+    async getTodos(){
+        return this.axios.get("/todos").catch(error=>error.response ? error.response: "");
+    }
 }
