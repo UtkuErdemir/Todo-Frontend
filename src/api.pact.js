@@ -1,4 +1,3 @@
-import {TodoService} from './utils/TodoService'
 import { eachLike } from '@pact-foundation/pact/dsl/matchers';
 
 expect.extend({
@@ -25,7 +24,7 @@ expect.extend({
 
 
 describe("API Pact test", () => {
-        const todoService = new TodoService(true);
+        const todoService = require('./utils/service');
         test("gets all todos", async() =>{
             await global.provider.addInteraction({
                 uponReceiving: 'a request all todos',
@@ -40,7 +39,7 @@ describe("API Pact test", () => {
                 }
             });
 
-            const apiGet = (await todoService.getTodos()).data;
+            const apiGet = (await todoService.getTodos(true)).data;
             expect(apiGet.data).toContainObject({id:0,todo_name:"Sample Todo"});
         })
 
@@ -66,7 +65,7 @@ describe("API Pact test", () => {
                 }
             });
 
-            const api = (await todoService.addTodo("1")).data;
+            const api = (await todoService.addTodo("1",true)).data;
             expect(api).toStrictEqual(expectedResult);
         });
 
@@ -92,7 +91,7 @@ describe("API Pact test", () => {
                 }
             });
 
-            const api = (await todoService.addTodo('')).data;
+            const api = (await todoService.addTodo('',true)).data;
 
             expect(api).toStrictEqual(expectedResult);
         });
