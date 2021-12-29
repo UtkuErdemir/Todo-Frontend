@@ -24,18 +24,18 @@
 - If you will test it. You have to wait a few seconds for first request.
 - https://ue-todo-app-frontend.herokuapp.com/
 
-#Contunious Integration
+# Contunious Integration
 
 - CircleCI used for CI process.
 
-#Contunious Deployment
+# Contunious Deployment
 
 - CircleCI integrated Heroku and its deploying to automaticly to Heroku.
 
-#Container Tool
+# Container Tool
 
 - Simple Dockerfile is created for this project. But its not used in CI and CD processes for now.
 
-#Orchestration Tool
+# Orchestration Tool
 
 - Simple pod file is created for orchestration. But its not used in CI and CD processes for now.
