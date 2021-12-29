@@ -1,10 +1,17 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import React from 'react';
 
+beforeEach(()=>{
+  const setStateMock = jest.fn();
+  const useStateMock = (useState) => [useState,setStateMock];
+  jest.spyOn(React,'useState').mockImplementation(useStateMock);
+})
 
 test('renders all components in the page', () => {
   const service = require('./utils/service');
   const getTodos = jest.spyOn(service,'getTodos').mockResolvedValue({data:{"success":true,message:'Ok.'}})
+
   render(<App/>);
   const input = screen.getByLabelText('app-text-input');
   const button = screen.getByRole('button');
