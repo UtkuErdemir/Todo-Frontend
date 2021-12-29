@@ -5,7 +5,7 @@ const config = {
 };
 
 const mockUrl = "http://127.0.0.1:3030";
-const baseUrl = "https://ue-todo-app-backend.herokuapp.com/todos";
+const baseUrl = "https://ue-todo-app-backend.herokuapp.com";
 
 export async function addTodo(todoName, mock) {
   const queryString = new URLSearchParams({ todo_name: todoName }).toString();
